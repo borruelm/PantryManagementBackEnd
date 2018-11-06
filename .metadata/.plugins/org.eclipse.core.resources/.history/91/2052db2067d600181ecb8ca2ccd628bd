@@ -1,0 +1,5 @@
+package src.pantryManagement.controller;
+
+public class PantryManagerRestService {
+
+}
