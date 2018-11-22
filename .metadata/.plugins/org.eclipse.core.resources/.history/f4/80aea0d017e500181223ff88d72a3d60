@@ -1,0 +1,5 @@
+loggin.level.org.springframework.web=DEBUG
+
+server.port=9080
+
+spring.h2.console.enable=true

@@ -1,0 +1,36 @@
+package src.pantryManagement.controller;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import src.pantryManagement.model.UserLogin;
+import src.pantryManagement.model.constants;
+import src.pantryManagement.repository.UserLoginRepository;
+
+@RestController
+@RequestMapping("api/v1/pantryManager/")
+public class PantryManagerRestService {
+	private constants CONST = new constants();
+	
+	@Autowired
+	private UserLoginRepository usrLogRep;
+	
+	@RequestMapping(value="welcome", method=RequestMethod.GET)
+	public ArrayList<String> welcomeMessage(){
+		ArrayList<String> myWelcomeMessage = new ArrayList<String>();
+		myWelcomeMessage.add(CONST.WELCOME_MSG);
+		return myWelcomeMessage;
+	}
+	
+	@RequestMapping(value="allUsers",  method=RequestMethod.GET)
+	public List<UserLogin> getUsers(){
+		return usrLogRep.findAll();
+	}
+	
+
+}

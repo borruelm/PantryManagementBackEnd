@@ -1,0 +1,9 @@
+package src.pantryManagement.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import src.pantryManagement.model.UserLogin;
+
+public interface UserLoginRepository extends JpaRepository<UserLogin, Integer> {
+
+}

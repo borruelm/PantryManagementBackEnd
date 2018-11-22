@@ -1,0 +1,5 @@
+package src.pantryManagement.model;
+
+public class UserLogin {
+
+}

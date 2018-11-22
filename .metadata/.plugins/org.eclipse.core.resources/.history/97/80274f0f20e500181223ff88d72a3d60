@@ -1,0 +1,20 @@
+package src.pantryManagement.model;
+
+public class UserLogin {
+	Integer id;
+	String userDataId;
+	String email;
+	String userName;
+	String password;
+	
+	public UserLogin() {}
+	
+	public UserLogin(Integer id, String userDataId, String email, String userName, String password) {
+		this.id = id;
+		this.userDataId= userDataId;
+		this.email = email;
+		this.userName = userName;
+		this.password = password;
+	}
+
+}

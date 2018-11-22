@@ -1,0 +1,18 @@
+package src.pantryManagement.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import src.pantryManagement.model.UserLogin;
+
+public interface UserLoginRepository extends JpaRepository<UserLogin, Integer> {
+	//return users by name
+	List<UserLogin> findByUserName(String userName);
+	
+	//Login service
+	List<UserLogin> findByUserNameAndPassword(String userName, String password);
+
+	
+
+}
